@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #161B1B;
+  color: #F1E8DE;
+}
+
+a{
+  text-decoration: none;
+  color: #F1E8DE;
+}
