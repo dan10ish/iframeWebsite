@@ -1,0 +1,24 @@
+.htmlScreen iframe {
+  width: 1024px;
+  height: 670px;
+  border: none;
+  background-color: #000000;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+  @media only screen and (min-width: 0px) and (max-width: 500px) {
+    /* Basically for Iphone  */
+    .htmlScreen iframe {
+      width: 1024px;
+      height: 670px;
+      border: none;
+      position: relative;
+      top: 55px;
+      background-color: #000000;
+      overflow-y: auto;
+    }
+  }
+}
