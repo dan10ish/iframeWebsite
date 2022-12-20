@@ -91,7 +91,7 @@ function App() {
                 PROJECTS{" "}
                 <span className="github">
                   <a
-                    href="https://github.com/dan7sh"
+                    href="https://github.com/dan10ish"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -191,7 +191,7 @@ function App() {
 
             {/* Footer */}
             <div className="footer">
-              Copyright <span className="copyright">©</span> 2022 Danish Ansari
+              Copyright <span className="copyright">©</span> 2023 Danish Ansari
             </div>
           </div>
         </div>
