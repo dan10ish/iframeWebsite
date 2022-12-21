@@ -18,7 +18,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 6000);
   }, []);
 
   return (
@@ -32,7 +32,9 @@ function App() {
           </span>
           <div className="scroll"></div>
           <div className="controlText">
-            Tap the Laptop and Scroll Down
+            Tap the Laptop 
+            <br />
+            Scroll down the screen
             <br />
             Move the Laptop in any direction
           </div>
