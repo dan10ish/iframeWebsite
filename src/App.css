@@ -1,3 +1,95 @@
+.control{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.scroll {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 28px;
+  width: 40px;
+  height: 40px;
+  border-left: 2px solid rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transform: rotate(-45deg);
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+
+.controlText{
+  font-family: "Space Mono", monospace;
+  font-size: 45px;
+  padding-top: 80px;
+  line-height: 90px;
+}
+
+.loadStart{
+  margin-top: -200px;
+  font-size: 200px;
+  padding-bottom: 50px;
+}
+
+.loadingdot {
+  opacity: 0;
+  -webkit-animation: loadingFade 1s infinite;
+  -moz-animation: loadingFade 1s infinite;
+  animation: loadingFade 1s infinite;
+}
+
+.loadingdot:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.loadingdot:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.loadingdot:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
 .header-text {
   position: fixed;
   z-index: 2;

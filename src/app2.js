@@ -3,6 +3,8 @@ import "./header.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useState, useEffect } from "react";
+import { css } from "@emotion/react";
+import BeatLoader from "react-spinners/BeatLoader";
 
 // Animate On Scroll
 AOS.init({
@@ -13,6 +15,12 @@ AOS.init({
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [showElement, setShowElement] = React.useState(true);
+  useEffect(() => {
+    setTimeout(function () {
+      setShowElement(false);
+    }, 3000);
+  }, []);
 
   useEffect(() => {
     setLoading(true);
@@ -21,24 +29,38 @@ function App() {
     }, 3000);
   }, []);
 
+  const cursorRef = React.useRef(null);
+
+  const beat: React.CSSProperties = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  };
+
   return (
     <div className="App">
       {loading ? (
-        <div className="control">
-          <span class="loadStart">
-            <span class="loadingdot">.</span>
-            <span class="loadingdot">.</span>
-            <span class="loadingdot">.</span>
-          </span>
-          <div className="scroll"></div>
-          <div className="controlText">
-            Tap the Laptop and Scroll Down
-            <br />
-            Move the Laptop in any direction
-          </div>
-        </div>
+        <BeatLoader
+          color={"#f1e8de"}
+          loading={loading}
+          size={20}
+          cssOverride={beat}
+        />
       ) : (
         <div className="App">
+          {showElement ? (
+            <div className="control">
+              <div className="scroll"></div>
+              <div className="controlText">
+                Tap the Laptop and Scroll Down
+                <br />
+                Move the Laptop in any direction
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
           {/* Header */}
           <header>
             <p className="header-text">
