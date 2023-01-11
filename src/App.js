@@ -30,14 +30,6 @@ function App() {
             <span class="loadingdot">.</span>
             <span class="loadingdot">.</span>
           </span>
-          <div className="scroll"></div>
-          <div className="controlText">
-            Tap the Laptop 
-            <br />
-            Scroll down the screen
-            <br />
-            Move the Laptop in any direction
-          </div>
         </div>
       ) : (
         <div className="App">
