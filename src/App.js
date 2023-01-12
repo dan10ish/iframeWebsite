@@ -1,28 +1,22 @@
-import "./App.css";
-import "./header.js";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React, { useState, useEffect } from "react";
+import danLanding from "./icons/danLanding.png";
+import github from "./icons/github.svg";
+import instagram from "./icons/instagram.svg";
+import linkedin from "./icons/linkedin.svg";
+import twitter from "./icons/twitter.svg";
+import "./App.css";
 
-// Animate On Scroll
-AOS.init({
-  offset: 50,
-  once: true,
-  duration: 400,
-});
-
-function App() {
+export default function App() {
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 6000);
+    }, 5000);
   }, []);
 
   return (
-    <div className="App">
+    <>
       {loading ? (
         <div className="control">
           <span class="loadStart">
@@ -32,162 +26,142 @@ function App() {
           </span>
         </div>
       ) : (
-        <div className="App">
-          {/* Header */}
-          <header>
-            <p className="header-text">
-              d<span className="at"></span>n
-              <span className="exclamation"></span>
-              <span className="dollar"></span>
-              <span className="hash"></span>
-            </p>
-          </header>
-
-          <div className="void">
-            {/* Landing */}
-            <div className="landing" data-aos="fade-up">
-              <div className="dictionary">/danish/</div>
-              <div className="description">
-                <p>
-                  <span className="hi">👋</span>, I'm a student pursuing
-                  mechatronics engineering and I{" "}
-                  <span className="heart">❤️</span> developing creative stuff
-                </p>
+        <main>
+          {/* Landing Page */}
+          <div className="landing">
+            <div className="header-one">
+              <div className="image">
+                <img src={danLanding} alt="Danish's Image" />
+              </div>
+              <div className="name">
+                d<span className="at"></span>n
+                <span className="exclamation"></span>
+                <span className="dollar"></span>
+                <span className="hash"></span>
               </div>
             </div>
-
-            <hr data-aos="fade-up" />
-
-            <div className="interest">
-              {/* Interests */}
-              <div className="heading" data-aos="fade-up">
-                INTERESTS
+            <div className="header-two">
+              <div className="social-icon">
+                <a
+                  href="https://github.com/dan10ish"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={github} alt="" />
+                </a>
               </div>
-              <hr data-aos="fade-up" />
-              <div className="interests" data-aos="fade-up">
-                <div className="interest-topic">&#62; creative coding</div>
-                <div className="interest-topic">&#62; game dev</div>
-                <div className="interest-topic">&#62; front-end</div>
-                <div className="interest-topic">&#62; problem solving</div>
-                <div className="interest-topic">&#62; music</div>
+              <div className="social-icon">
+                <a
+                  href="https://www.instagram.com/dan10ish/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={instagram} alt="" />
+                </a>
               </div>
-            </div>
-
-            <hr data-aos="fade-up" />
-
-            <div className="project">
-              {/* Projects */}
-              <div className="heading" data-aos="fade-up">
-                PROJECTS{" "}
-                <span className="github">
-                  <a
-                    href="https://github.com/dan10ish"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>{" "}
-                </span>
+              <div className="social-icon">
+                <a
+                  href="https://www.linkedin.com/in/dan10ish/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={linkedin} alt="" />
+                </a>
               </div>
-              <hr data-aos="fade-up" />
-              <div className="projects" data-aos="fade-up">
-                <div className="projects-topic">
-                  <a
-                    href="https://danish.dev/Galaxy/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    <h2>
-                      {" "}
-                      <span className="plink">Galaxy Generator</span>
-                    </h2>
-                  </a>
-                </div>
-                <div className="projects-topic">
-                  <a
-                    href="https://marketplace.visualstudio.com/items?itemName=danish.mariana-theme"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {" "}
-                    <h2>
-                      <span className="plink">VSCode Theme</span>
-                    </h2>
-                  </a>
-                </div>
-                <div className="projectLoading">
-                  <div className="more">
-                    <span class="load">
-                      <span class="loading-dot">.</span>
-                      <span class="loading-dot">.</span>
-                      <span class="loading-dot">.</span>
-                    </span>
-                    <span className="loading-text">in progress</span>
-                  </div>
-                </div>
+              <div className="social-icon">
+                <a
+                  href="https://twitter.com/dan10ish"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={twitter} alt="" />
+                </a>
               </div>
             </div>
-
-            <hr data-aos="fade-up" />
-
-            <div className="cont">
-              {/* Contact */}
-              <div className="heading" data-aos="fade-up">
-                CONTACT
-              </div>
-              <hr data-aos="fade-up" />
-              <div className="contact" data-aos="fade-up">
-                <div className="contact-instagram">
-                  <a
-                    href="https://www.instagram.com/dan10ish"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Instagram
-                  </a>
-                </div>
-                <div className="contact-twitter">
-                  <a
-                    href="https://twitter.com/dan10ish"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Twitter
-                  </a>
-                </div>
-                <div className="contact-snapchat">
-                  <a
-                    href="https://www.snapchat.com/add/dan10ish"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Snapchat
-                  </a>
-                </div>
-                <div className="contact-linkedin">
-                  <a
-                    href="https://www.linkedin.com/in/dan10ish/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <hr data-aos="fade-up" />
-
-            {/* Footer */}
-            <div className="footer">
-              Copyright <span className="copyright">©</span> 2023 Danish Ansari
+            <div className="header-three">
+              <span class="mouse">
+                <span class="move"></span>
+              </span>
+              <h2>Scroll down</h2>
             </div>
           </div>
-        </div>
+
+          <hr />
+
+          {/* About */}
+          <div className="about">
+            <div className="about-title">/danish/</div>
+            <div className="about-content">
+              <span className="hi">👋</span>, I'm a student pursuing
+              mechatronics engineering and I <span className="heart">❤️</span>{" "}
+              developing creative stuff
+            </div>
+          </div>
+
+          <hr />
+
+          {/* Interests */}
+          <div className="interests">
+            <div className="interests-title">INTERESTS</div>
+            <div className="interest-list">
+              <div className="interest-topic">&#62; creative coding</div>
+              <div className="interest-topic">&#62; machine learning</div>
+              <div className="interest-topic">&#62; game dev</div>
+              <div className="interest-topic">&#62; front-end</div>
+              <div className="interest-topic">&#62; music</div>
+            </div>
+          </div>
+
+          <hr />
+
+          {/* Projects */}
+          <div className="projects">
+            <div className="projects-title">PROJECTS</div>
+            <div className="projects-topic">
+              <a
+                href="https://danish.dev/Galaxy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <h2>
+                  {" "}
+                  <span className="plink">Galaxy Generator</span>
+                </h2>
+              </a>
+            </div>
+            <div className="projects-topic">
+              <a
+                href="https://marketplace.visualstudio.com/items?itemName=danish.mariana-theme"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <h2>
+                  <span className="plink">VSCode Theme</span>
+                </h2>
+              </a>
+            </div>
+            <div className="projectLoading">
+              <div className="more">
+                <span class="load">
+                  <span class="loading-dot">.</span>
+                  <span class="loading-dot">.</span>
+                  <span class="loading-dot">.</span>
+                </span>
+                <span className="loading-text">in progress</span>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          {/* Footer */}
+          <div className="footer">
+            Copyright <span className="copyright">©</span> 2023 Danish Ansari
+          </div>
+        </main>
       )}
-    </div>
+    </>
   );
 }
-
-export default App;
