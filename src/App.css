@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-hr{
+hr {
   position: relative;
   left: 50%;
   transform: translate(-50%);
@@ -46,7 +46,6 @@ hr{
   animation: loadingFade 1s infinite;
 }
 
-
 .loadingdot:nth-child(1) {
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
@@ -64,7 +63,6 @@ hr{
   -moz-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
-
 
 .landing {
   height: 100vh;
@@ -237,8 +235,11 @@ hr{
   margin-left: 5%;
   margin-top: 5%;
   font-family: "Space Mono", monospace;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 70px;
+}
+
+.projects-topic h2{
   font-weight: 200;
 }
 
