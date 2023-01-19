@@ -82,7 +82,7 @@ export default function App() {
               <span class="mouse">
                 <span class="move"></span>
               </span>
-              <h2>Scroll down</h2>
+              <h2>Scroll down this screen</h2>
             </div>
           </div>
 
