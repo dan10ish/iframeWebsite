@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danish Ansari | Phone</title>
+    <link rel="stylesheet" href="./phone-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="time"><h2 id="displayDateTime"></h2></div>
+      <div class="header-icons">
+        <div class="h-icon">
+          <img src="./assets/plane.png" alt="Airplane Mode" />
+        </div>
+        <div class="h-icons">
+          <img src="./assets/Battery.svg" alt="Battery" />
+        </div>
+      </div>
+    </div>
+
+    <iframe
+      allow="autoplay *; encrypted-media *;"
+      frameborder="0"
+      height="190"
+      style="
+        width: 100%;
+        max-width: 660px;
+        overflow: hidden;
+        background: transparent;
+      "
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+      src="https://embed.music.apple.com/in/album/life-is-good-feat-drake/1493864494?i=1493865024"
+    ></iframe>
+    <div class="icons-container">
+      <div class="icons one">
+        <div class="icon-github">
+          <a
+            href="https://github.com/dan10ish"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="./p-assets/github.svg" alt=""
+          /></a>
+        </div>
+        <div class="icon-nameg">GitHub</div>
+      </div>
+      <div class="icons two">
+        <div class="icon-mail">
+          <a href=""><img src="./p-assets/mail.svg" alt="" /></a>
+        </div>
+        <div class="icon-namem">Mail</div>
+      </div>
+      <div class="icons three">
+        <div class="icon-insta">
+          <a
+            href="https://www.instagram.com/dan10ish/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="./p-assets/instagram.svg" alt=""
+          /></a>
+        </div>
+        <div class="icon-namei">Instagram</div>
+      </div>
+      <div class="icons four">
+        <div class="icon-twitter">
+          <a
+            href="https://twitter.com/dan10ish"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="./p-assets/twitter.svg" alt=""
+          /></a>
+        </div>
+        <div class="icon-namet">Twitter</div>
+      </div>
+    </div>
+    <div class="bottom"></div>
+  </body>
+  <script type="text/javascript">
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    var strTime = hours + ":" + minutes;
+    document.getElementById("displayDateTime").innerHTML = strTime;
+  </script>
+</html>

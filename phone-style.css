@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.time h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header-icons {
+  position: relative;
+  left: 67%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.h-icon img {
+  height: 20px;
+  width: 20px;
+}
+
+.h-icons img {
+  height: 30px;
+  width: 30px;
+}
+
+.h-icons {
+  padding-left: 7px;
+}
+
+.icons-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.icon-github img {
+  height: 60px;
+  width: 60px;
+  border: 1px solid #292929;
+  border-radius: 10px;
+}
+
+.icon-mail img {
+  height: 55px;
+  width: 55px;
+}
+.icon-insta img {
+  height: 85px;
+  width: 85px;
+}
+.icon-twitter img {
+  height: 60px;
+  width: 60px;
+}
+
+.icon-namei {
+  font-weight: 200;
+  position: relative;
+  top: -10px;
+  text-align: center;
+}
+
+.icon-nameg {
+  font-weight: 200;
+  position: relative;
+  top: 2px;
+  text-align: center;
+}
+
+.icon-namem {
+  font-weight: 200;
+  position: relative;
+  top: 5px;
+  text-align: center;
+}
+
+.icon-namet {
+  font-weight: 200;
+  position: relative;
+  top: 3px;
+  text-align: center;
+}
+
+.two {
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.three {
+  padding-right: 5px;
+}
+
+.bottom {
+  background-color: #2a2a2a;
+  height: 70px;
+  width: 90%;
+  position: absolute;
+  top: 88%;
+  border-radius: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
